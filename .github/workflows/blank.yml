@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  release:
+    types:
+      - published
+
+  workflow_dispatch:
+
+jobs:
+  nomal:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello, nomal!
+        
+  pre-prd:
+    runs-on: ubuntu-latest
+    environment: pre-prodction
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello, pre-prd!
