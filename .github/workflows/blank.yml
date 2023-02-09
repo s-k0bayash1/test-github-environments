@@ -21,7 +21,7 @@ jobs:
         
   pre-prd:
     runs-on: ubuntu-latest
-    environment: pre-prodction
+    environment: pre-production
 
     steps:
       - uses: actions/checkout@v3
